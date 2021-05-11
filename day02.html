@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       var a;
+       console.log(a===undefined);
+       var b = 'atguigu';
+       console.log(typeof b);
+       var c = null;
+       console.log(typeof c);
+       var obj = {
+           name:'yyj',
+           age:28,
+           fun:function(){
+            console.log('hello');
+           }
+       }
+       console.log(typeof obj);
+       console.log(obj.fun instanceof Object===Function);
+       var mmm;
+       console.log("==========================");
+       var a = { age:12};
+       var b = a;
+       a = {age:13,name:'bob'};
+       b.age = 14;
+       console.log(b.age,a.name,a.age);// 14 bob 13
+
+       function fn2(obj1){
+          obj1.age = 15;
+          console.log(obj1.age);
+       }
+       fn2(a);
+       console.log(a.age);
+   </script> 
+</body>
+</html>
